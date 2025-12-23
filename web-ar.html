@@ -2,33 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AR Menu Test</title>
+  <title>AR Menu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Model Viewer (locked stable version) -->
   <script type="module"
-    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js">
   </script>
 
   <style>
     body {
       margin: 0;
       background: #000;
+      font-family: Arial, sans-serif;
     }
+
     model-viewer {
-      width: 100%;
+      width: 100vw;
       height: 100vh;
+      background: #111;
+    }
+
+    .hint {
+      position: fixed;
+      top: 10px;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      z-index: 10;
     }
   </style>
 </head>
 
 <body>
 
+<div class="hint">
+  Open in Chrome (Android) or Safari (iPhone)
+</div>
+
 <model-viewer
   src="https://modelviewer.dev/shared-assets/models/Burger.glb"
+  camera-controls
+  auto-rotate
   ar
-  camera-controls>
+  ar-modes="scene-viewer webxr quick-look"
+  shadow-intensity="1">
 </model-viewer>
 
 </body>
 </html>
-
