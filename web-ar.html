@@ -2,10 +2,12 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>WebAR Clean Test</title>
+  <title>Web AR Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js">
+  </script>
 
   <style>
     html, body {
@@ -23,11 +25,13 @@
 
 <body>
 
-<!-- Use it like any other HTML element -->
-<model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="shared-assets/models/NeilArmstrong.glb" ar environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+<model-viewer
+  src="https://modelviewer.dev/shared-assets/models/Burger.glb"
+  camera-controls
+  auto-rotate
+  ar
+  ar-modes="scene-viewer webxr quick-look">
+</model-viewer>
 
 </body>
 </html>
-
-
-
