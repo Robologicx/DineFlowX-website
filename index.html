@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="DineFlowX - Complete Restaurant Management Platform for orders, tables, staff, QR ordering, reports and multi-branch restaurants.">
+
+<meta name="keywords"
+content="DineFlowX, restaurant management system, restaurant POS, QR ordering, restaurant software, restaurant app">
+
 <title>DineFlowX | Restaurant Management Platform</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Google Font -->
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
 
 <style>
+
+/* =========================================
+   GLOBAL
+========================================= */
 
 *{
 margin:0;
@@ -23,6 +42,7 @@ scroll-behavior:smooth;
 body{
 background:#ffffff;
 color:#1e293b;
+line-height:1.6;
 }
 
 .container{
@@ -31,10 +51,16 @@ max-width:1300px;
 margin:auto;
 }
 
+
+/* =========================================
+   HEADER
+========================================= */
+
 header{
 position:fixed;
 width:100%;
 top:0;
+left:0;
 background:#ffffff;
 box-shadow:0 2px 20px rgba(0,0,0,.08);
 z-index:1000;
@@ -44,13 +70,21 @@ z-index:1000;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 0;
+padding:15px 0;
 }
 
 .logo{
+display:flex;
+align-items:center;
+gap:10px;
 font-size:30px;
 font-weight:800;
 color:#0f172a;
+}
+
+.logo img{
+height:50px;
+width:auto;
 }
 
 .logo span{
@@ -59,33 +93,70 @@ color:#16a34a;
 
 .nav-links{
 display:flex;
-gap:30px;
+gap:12px;
 align-items:center;
 }
 
 .nav-links a{
 text-decoration:none;
-color:#334155;
-font-weight:500;
 }
 
+.nav-link{
+color:#334155;
+font-weight:500;
+padding:8px 10px;
+transition:.3s;
+}
+
+.nav-link:hover{
+color:#16a34a;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
 .btn{
-background:#16a34a;
 color:white;
-padding:14px 28px;
+padding:13px 22px;
 border-radius:10px;
 text-decoration:none;
 font-weight:600;
 display:inline-block;
 transition:.3s;
+border:none;
+cursor:pointer;
 }
 
 .btn:hover{
 transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
+.btn-demo{
+background:#16a34a;
+}
+
+.btn-launch{
+background:#2563eb;
+}
+
+.btn-download{
+background:#0f9f52;
+}
+
+.btn-download:hover{
+background:#087f40;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
 .hero{
-padding-top:150px;
+padding-top:160px;
 padding-bottom:100px;
 background:linear-gradient(135deg,#0f172a,#1e293b);
 color:white;
@@ -101,26 +172,51 @@ align-items:center;
 .hero h1{
 font-size:60px;
 line-height:1.1;
-margin-bottom:20px;
+margin-bottom:25px;
+font-weight:800;
 }
 
 .hero p{
 font-size:20px;
 color:#cbd5e1;
 margin-bottom:35px;
+line-height:1.7;
 }
+
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.download-note{
+margin-top:18px;
+font-size:14px;
+color:#94a3b8;
+}
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
 
 .hero-image{
 background:white;
 border-radius:20px;
 padding:20px;
-box-shadow:0 20px 50px rgba(0,0,0,.2);
+box-shadow:0 20px 50px rgba(0,0,0,.3);
 }
 
 .hero-image img{
 width:100%;
+display:block;
 border-radius:15px;
 }
+
+
+/* =========================================
+   STATS
+========================================= */
 
 .stats{
 padding:60px 0;
@@ -139,12 +235,27 @@ padding:30px;
 text-align:center;
 border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,.05);
+transition:.3s;
+}
+
+.stat-card:hover{
+transform:translateY(-5px);
 }
 
 .stat-card h2{
 font-size:42px;
 color:#16a34a;
+margin-bottom:5px;
 }
+
+.stat-card p{
+color:#64748b;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
 
 .section{
 padding:100px 0;
@@ -160,10 +271,14 @@ margin-bottom:20px;
 .section-subtitle{
 text-align:center;
 max-width:700px;
-margin:auto;
+margin:0 auto 60px;
 color:#64748b;
-margin-bottom:60px;
 }
+
+
+/* =========================================
+   FEATURES
+========================================= */
 
 .features{
 display:grid;
@@ -177,10 +292,12 @@ border-radius:18px;
 background:white;
 box-shadow:0 5px 20px rgba(0,0,0,.08);
 transition:.3s;
+border:1px solid #f1f5f9;
 }
 
 .feature:hover{
 transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,.10);
 }
 
 .feature-icon{
@@ -190,7 +307,17 @@ margin-bottom:15px;
 
 .feature h3{
 margin-bottom:15px;
+font-size:22px;
 }
+
+.feature p{
+color:#64748b;
+}
+
+
+/* =========================================
+   SOLUTIONS
+========================================= */
 
 .demo{
 background:#f8fafc;
@@ -206,15 +333,32 @@ align-items:center;
 .demo img{
 width:100%;
 border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.10);
+}
+
+.demo h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.demo p{
+color:#64748b;
 }
 
 .demo ul{
-margin-top:20px;
+margin-top:25px;
+list-style:none;
 }
 
 .demo li{
 margin-bottom:15px;
+font-weight:500;
 }
+
+
+/* =========================================
+   PRICING
+========================================= */
 
 .pricing-grid{
 display:grid;
@@ -228,12 +372,21 @@ padding:40px;
 border-radius:20px;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
 text-align:center;
+transition:.3s;
+}
+
+.price-card:hover{
+transform:translateY(-8px);
 }
 
 .price-card.featured{
 background:#16a34a;
 color:white;
 transform:scale(1.05);
+}
+
+.price-card.featured:hover{
+transform:scale(1.07);
 }
 
 .price{
@@ -251,6 +404,15 @@ margin:25px 0;
 margin:12px 0;
 }
 
+.price-card p{
+opacity:.8;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
 .cta{
 background:linear-gradient(135deg,#16a34a,#22c55e);
 padding:100px 0;
@@ -263,17 +425,80 @@ font-size:50px;
 margin-bottom:20px;
 }
 
+.cta p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.cta-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
 footer{
 background:#0f172a;
 color:white;
-padding:50px 0;
+padding:55px 0;
 text-align:center;
+}
+
+footer img{
+height:80px;
+margin-bottom:15px;
+}
+
+footer h2{
+font-size:28px;
 }
 
 footer p{
 margin-top:10px;
 color:#cbd5e1;
 }
+
+
+/* =========================================
+   DOWNLOAD BADGE
+========================================= */
+
+.download-badge{
+display:inline-flex;
+align-items:center;
+gap:8px;
+}
+
+.download-icon{
+font-size:18px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:1100px){
+
+.nav-links{
+gap:5px;
+}
+
+.nav-link{
+padding:6px;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+}
+
 
 @media(max-width:900px){
 
@@ -290,8 +515,16 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:1fr;
 }
 
+.price-card.featured{
+transform:none;
+}
+
+.price-card.featured:hover{
+transform:translateY(-8px);
+}
+
 .hero h1{
-font-size:42px;
+font-size:44px;
 }
 
 .nav-links{
@@ -300,37 +533,216 @@ display:none;
 
 }
 
+
+@media(max-width:600px){
+
+.container{
+width:92%;
+}
+
+.hero{
+padding-top:130px;
+padding-bottom:70px;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.hero-buttons .btn{
+width:100%;
+text-align:center;
+}
+
+.stats-grid{
+grid-template-columns:1fr;
+}
+
+.section{
+padding:70px 0;
+}
+
+.section-title{
+font-size:34px;
+}
+
+.demo h2{
+font-size:32px;
+}
+
+.cta{
+padding:70px 0;
+}
+
+.cta h2{
+font-size:35px;
+}
+
+.cta-buttons{
+flex-direction:column;
+}
+
+.cta-buttons .btn{
+width:100%;
+}
+
+.logo{
+font-size:23px;
+}
+
+.logo img{
+height:42px;
+}
+
+}
+
+
+/* =========================================
+   DOWNLOAD BUTTON PULSE
+========================================= */
+
+.download-button-wrapper{
+position:relative;
+display:inline-block;
+}
+
+.download-button-wrapper::after{
+content:"";
+position:absolute;
+top:-5px;
+right:-5px;
+width:9px;
+height:9px;
+background:#22c55e;
+border-radius:50%;
+box-shadow:0 0 0 4px rgba(34,197,94,.15);
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
 <header>
+
 <div class="container">
+
 <div class="navbar">
 
-<div class="logo" style="display:flex;align-items:center;gap:10px;">
-<img src="logo-wbg.png" alt="DineFlowX Logo" style="height:50px;">
-<div>Dine<span>FlowX</span></div>
+
+<!-- LOGO -->
+
+<div class="logo">
+
+<img
+src="logo-wbg.png"
+alt="DineFlowX Logo">
+
+<div>
+Dine<span>FlowX</span>
 </div>
+
+</div>
+
+
+<!-- NAVIGATION -->
 
 <div class="nav-links">
-<a href="#features">Features</a>
-<a href="#solutions">Solutions</a>
-<a href="#pricing">Pricing</a>
-<a href="#contact">Contact</a>
 
-<a href="https://wa.me/923018777220?text=Hello%20DineFlowX,%20please%20give%20me%20a%20demo%20of%20this%20app."
-   target="_blank"
-   class="btn">
-Book Demo
+
+<a
+href="#features"
+class="nav-link">
+Features
 </a>
-<a href="https://www.admin.dineflowx.com/" target="_blank" class="btn" style="background:#2563eb;">🚀 Launch App</a>
+
+
+<a
+href="#solutions"
+class="nav-link">
+Solutions
+</a>
+
+
+<a
+href="#pricing"
+class="nav-link">
+Pricing
+</a>
+
+
+<a
+href="#contact"
+class="nav-link">
+Contact
+</a>
+
+
+<!-- BOOK DEMO -->
+
+<a
+href="https://wa.me/923018777220?text=Hello%20DineFlowX,%20please%20give%20me%20a%20demo%20of%20this%20app."
+target="_blank"
+class="btn btn-demo">
+
+Book Demo
+
+</a>
+
+
+<!-- LAUNCH APP -->
+
+<a
+href="https://www.admin.dineflowx.com/"
+target="_blank"
+class="btn btn-launch">
+
+🚀 Launch App
+
+</a>
+
+
+<!-- DOWNLOAD APK -->
+
+<a
+href="https://github.com/Robologicx/DineFlowX-website/releases/latest/download/app-release.apk"
+class="btn btn-download download-badge">
+
+<span class="download-icon">📱</span>
+
+Download APK
+
+</a>
+
+
 </div>
 
 </div>
+
 </div>
+
 </header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
 
 <section class="hero">
 
@@ -338,41 +750,115 @@ Book Demo
 
 <div class="hero-content">
 
+
+<!-- HERO TEXT -->
+
 <div>
 
 <h1>
-The Complete Restaurant Management Platform
+
+The Complete Restaurant
+Management Platform
+
 </h1>
 
+
 <p>
+
 Manage orders, tables, staff, QR ordering,
-expenses, reports and customer apps from a single platform.
-Built for restaurants, cafes, cloud kitchens and multi-branch businesses.
+expenses, reports and customer apps from a
+single platform.
+
+Built for restaurants, cafes, cloud kitchens
+and multi-branch businesses.
+
 </p>
 
-<div style="display:flex;gap:15px;flex-wrap:wrap;">
-<a href="https://wa.me/923018777220?text=Hello%20DineFlowX,%20please%20give%20me%20a%20demo%20of%20this%20app."
-   target="_blank"
-   class="btn">
+
+<!-- HERO BUTTONS -->
+
+<div class="hero-buttons">
+
+
+<!-- BOOK DEMO -->
+
+<a
+href="https://wa.me/923018777220?text=Hello%20DineFlowX,%20please%20give%20me%20a%20demo%20of%20this%20app."
+target="_blank"
+class="btn btn-demo">
+
 Book Demo
+
 </a>
-<a href="https://www.admin.dineflowx.com/" target="_blank" class="btn" style="background:#2563eb;">🚀 Launch App</a>
-</div>
+
+
+<!-- LAUNCH APP -->
+
+<a
+href="https://www.admin.dineflowx.com/"
+target="_blank"
+class="btn btn-launch">
+
+🚀 Launch App
+
+</a>
+
+
+<!-- DOWNLOAD APK -->
+
+<div class="download-button-wrapper">
+
+<a
+href="https://github.com/Robologicx/DineFlowX-website/releases/latest/download/app-release.apk"
+class="btn btn-download download-badge">
+
+<span class="download-icon">
+📱
+</span>
+
+Download Android App
+
+</a>
 
 </div>
+
+
+</div>
+
+
+<div class="download-note">
+
+✓ Android APK &nbsp; • &nbsp; Latest Version &nbsp; • &nbsp; Easy Installation
+
+</div>
+
+
+</div>
+
+
+
+<!-- HERO IMAGE -->
 
 <div class="hero-image">
 
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200"
-alt="Restaurant Dashboard">
+<img
+src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200"
+alt="DineFlowX Restaurant Dashboard">
 
 </div>
+
 
 </div>
 
 </div>
 
 </section>
+
+
+
+<!-- =========================================
+     STATS
+========================================= -->
 
 <section class="stats">
 
@@ -380,25 +866,58 @@ alt="Restaurant Dashboard">
 
 <div class="stats-grid">
 
-<div class="stat-card">
-<h2>100%</h2>
-<p>Cloud Based</p>
-</div>
 
 <div class="stat-card">
-<h2>24/7</h2>
-<p>Real Time Operations</p>
+
+<h2>
+100%
+</h2>
+
+<p>
+Cloud Based
+</p>
+
 </div>
 
-<div class="stat-card">
-<h2>Multi</h2>
-<p>Branch Support</p>
-</div>
 
 <div class="stat-card">
-<h2>All</h2>
-<p>Platforms Supported</p>
+
+<h2>
+24/7
+</h2>
+
+<p>
+Real Time Operations
+</p>
+
 </div>
+
+
+<div class="stat-card">
+
+<h2>
+Multi
+</h2>
+
+<p>
+Branch Support
+</p>
+
+</div>
+
+
+<div class="stat-card">
+
+<h2>
+All
+</h2>
+
+<p>
+Platforms Supported
+</p>
+
+</div>
+
 
 </div>
 
@@ -406,67 +925,187 @@ alt="Restaurant Dashboard">
 
 </section>
 
-<section class="section" id="features">
+
+
+<!-- =========================================
+     FEATURES
+========================================= -->
+
+<section
+class="section"
+id="features">
 
 <div class="container">
 
+
 <h2 class="section-title">
+
 Everything You Need
+
 </h2>
 
+
 <p class="section-subtitle">
-Powerful tools designed to streamline restaurant operations and increase efficiency.
+
+Powerful tools designed to streamline
+restaurant operations and increase efficiency.
+
 </p>
+
 
 <div class="features">
 
-<div class="feature">
-<div class="feature-icon">🍽️</div>
-<h3>Order Management</h3>
-<p>Manage dine-in, takeaway and delivery orders in real time.</p>
-</div>
 
 <div class="feature">
-<div class="feature-icon">📱</div>
-<h3>QR Ordering</h3>
-<p>Customers scan and order directly from their table.</p>
+
+<div class="feature-icon">
+🍽️
 </div>
 
-<div class="feature">
-<div class="feature-icon">👨‍🍳</div>
-<h3>Staff Management</h3>
-<p>Assign roles, permissions and monitor performance.</p>
+<h3>
+Order Management
+</h3>
+
+<p>
+Manage dine-in, takeaway and delivery
+orders in real time.
+</p>
+
 </div>
 
-<div class="feature">
-<div class="feature-icon">🏢</div>
-<h3>Multi Branch</h3>
-<p>Control multiple restaurant locations from one dashboard.</p>
-</div>
+
 
 <div class="feature">
-<div class="feature-icon">📊</div>
-<h3>Sales Analytics</h3>
-<p>Revenue trends, top products and business insights.</p>
+
+<div class="feature-icon">
+📱
 </div>
 
-<div class="feature">
-<div class="feature-icon">💰</div>
-<h3>Expense Tracking</h3>
-<p>Track expenses and automatically calculate profits.</p>
+<h3>
+QR Ordering
+</h3>
+
+<p>
+Customers scan and order directly
+from their table.
+</p>
+
 </div>
 
-<div class="feature">
-<div class="feature-icon">🖨️</div>
-<h3>Thermal Printing</h3>
-<p>Instant receipt and kitchen ticket printing.</p>
-</div>
+
 
 <div class="feature">
-<div class="feature-icon">❤️</div>
-<h3>Customer App</h3>
-<p>Favorites, cart, ordering history and profile management.</p>
+
+<div class="feature-icon">
+👨‍🍳
 </div>
+
+<h3>
+Staff Management
+</h3>
+
+<p>
+Assign roles, permissions and monitor
+staff performance.
+</p>
+
+</div>
+
+
+
+<div class="feature">
+
+<div class="feature-icon">
+🏢
+</div>
+
+<h3>
+Multi Branch
+</h3>
+
+<p>
+Control multiple restaurant locations
+from one dashboard.
+</p>
+
+</div>
+
+
+
+<div class="feature">
+
+<div class="feature-icon">
+📊
+</div>
+
+<h3>
+Sales Analytics
+</h3>
+
+<p>
+Revenue trends, top products and
+business insights.
+</p>
+
+</div>
+
+
+
+<div class="feature">
+
+<div class="feature-icon">
+💰
+</div>
+
+<h3>
+Expense Tracking
+</h3>
+
+<p>
+Track expenses and automatically
+calculate profits.
+</p>
+
+</div>
+
+
+
+<div class="feature">
+
+<div class="feature-icon">
+🖨️
+</div>
+
+<h3>
+Thermal Printing
+</h3>
+
+<p>
+Instant receipt and kitchen ticket
+printing.
+</p>
+
+</div>
+
+
+
+<div class="feature">
+
+<div class="feature-icon">
+❤️
+</div>
+
+<h3>
+Customer App
+</h3>
+
+<p>
+Favorites, cart, ordering history
+and profile management.
+</p>
+
+</div>
+
 
 </div>
 
@@ -474,35 +1113,100 @@ Powerful tools designed to streamline restaurant operations and increase efficie
 
 </section>
 
-<section class="section demo" id="solutions">
+
+
+<!-- =========================================
+     SOLUTIONS
+========================================= -->
+
+<section
+class="section demo"
+id="solutions">
 
 <div class="container">
 
 <div class="demo-grid">
 
+
+<!-- IMAGE -->
+
 <div>
-<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200">
+
+<img
+src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200"
+alt="Modern Restaurant">
+
 </div>
 
+
+<!-- CONTENT -->
+
 <div>
 
-<h2 style="font-size:42px;margin-bottom:20px;">
+<h2>
+
 Built For Modern Restaurants
+
 </h2>
 
+
 <p>
-Whether you're running a small café or a restaurant chain,
-DineFlowX helps automate operations and improve customer experience.
+
+Whether you're running a small café
+or a restaurant chain, DineFlowX helps
+automate operations and improve
+customer experience.
+
 </p>
 
+
 <ul>
-<li>✓ QR Table Ordering</li>
-<li>✓ Customer Mobile App</li>
-<li>✓ Real-Time Dashboard</li>
-<li>✓ Revenue Reports</li>
-<li>✓ Multi-Branch Support</li>
-<li>✓ Cloud Based Management</li>
+
+<li>
+✓ QR Table Ordering
+</li>
+
+<li>
+✓ Customer Mobile App
+</li>
+
+<li>
+✓ Real-Time Dashboard
+</li>
+
+<li>
+✓ Revenue Reports
+</li>
+
+<li>
+✓ Multi-Branch Support
+</li>
+
+<li>
+✓ Cloud Based Management
+</li>
+
 </ul>
+
+
+<!-- DOWNLOAD -->
+
+<div style="margin-top:30px;">
+
+<a
+href="https://github.com/Robologicx/DineFlowX-website/releases/latest/download/app-release.apk"
+class="btn btn-download download-badge">
+
+<span class="download-icon">
+📱
+</span>
+
+Download Android App
+
+</a>
+
+</div>
+
 
 </div>
 
@@ -512,100 +1216,331 @@ DineFlowX helps automate operations and improve customer experience.
 
 </section>
 
-<section class="section" id="pricing">
+
+
+<!-- =========================================
+     PRICING
+========================================= -->
+
+<section
+class="section"
+id="pricing">
 
 <div class="container">
 
+
 <h2 class="section-title">
+
 Simple Pricing
+
 </h2>
+
+
+<p class="section-subtitle">
+
+Choose the plan that fits your restaurant.
+
+</p>
+
 
 <div class="pricing-grid">
 
+
+<!-- STARTER -->
+
 <div class="price-card">
-<h3>Starter</h3>
-<div class="price">$12</div>
-<p>/month</p>
-<ul>
-<li>Single Branch</li>
-<li>Order Management</li>
-<li>QR Ordering</li>
-<li>Reports</li>
-</ul>
+
+<h3>
+Starter
+</h3>
+
+<div class="price">
+$12
 </div>
+
+<p>
+/month
+</p>
+
+<ul>
+
+<li>
+Single Branch
+</li>
+
+<li>
+Order Management
+</li>
+
+<li>
+QR Ordering
+</li>
+
+<li>
+Reports
+</li>
+
+</ul>
+
+<a
+href="https://wa.me/923018777220?text=Hello%20DineFlowX,%20I%20am%20interested%20in%20the%20Starter%20plan."
+target="_blank"
+class="btn btn-demo">
+
+Get Started
+
+</a>
+
+</div>
+
+
+
+<!-- BUSINESS -->
 
 <div class="price-card featured">
-<h3>Business</h3>
-<div class="price">$28</div>
-<p>/month</p>
-<ul>
-<li>Multi Users</li>
-<li>Staff Management</li>
-<li>Expense Tracking</li>
-<li>Advanced Reports</li>
-</ul>
+
+<h3>
+Business
+</h3>
+
+<div class="price">
+$28
 </div>
 
-<div class="price-card">
-<h3>Enterprise</h3>
-<div class="price">Custom</div>
+<p>
+/month
+</p>
+
 <ul>
-<li>Unlimited Branches</li>
-<li>White Label</li>
-<li>Custom Features</li>
-<li>Priority Support</li>
+
+<li>
+Multi Users
+</li>
+
+<li>
+Staff Management
+</li>
+
+<li>
+Expense Tracking
+</li>
+
+<li>
+Advanced Reports
+</li>
+
 </ul>
+
+<a
+href="https://wa.me/923018777220?text=Hello%20DineFlowX,%20I%20am%20interested%20in%20the%20Business%20plan."
+target="_blank"
+class="btn"
+style="background:white;color:#16a34a;">
+
+Choose Business
+
+</a>
+
 </div>
+
+
+
+<!-- ENTERPRISE -->
+
+<div class="price-card">
+
+<h3>
+Enterprise
+</h3>
+
+<div class="price">
+Custom
+</div>
+
+<ul>
+
+<li>
+Unlimited Branches
+</li>
+
+<li>
+White Label
+</li>
+
+<li>
+Custom Features
+</li>
+
+<li>
+Priority Support
+</li>
+
+</ul>
+
+<a
+href="https://wa.me/923018777220?text=Hello%20DineFlowX,%20I%20am%20interested%20in%20the%20Enterprise%20plan."
+target="_blank"
+class="btn btn-demo">
+
+Contact Us
+
+</a>
+
+</div>
+
 
 </div>
 
 </div>
 
 </section>
+
+
+
+<!-- =========================================
+     CTA
+========================================= -->
 
 <section class="cta">
 
 <div class="container">
 
+
 <h2>
-Ready to Transform Your Restaurant?
+
+Ready to Transform
+Your Restaurant?
+
 </h2>
 
-<p style="font-size:20px;margin-bottom:30px;">
-Book a free demo and see DineFlowX in action.
+
+<p>
+
+Book a free demo, launch the online platform,
+or download the Android app.
+
 </p>
 
-<div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;">
-<a href=""https://wa.me/923018777220?text=Hello%20DineFlowX,%20please%20give%20me%20a%20demo%20of%20this%20app."" class="btn" style="background:white;color:#16a34a;">Book Free Demo</a>
-  
-<a href="https://www.admin.dineflowx.com/" target="_blank" class="btn" style="background:#2563eb;color:white;">🚀 Launch App</a>
+
+<div class="cta-buttons">
+
+
+<!-- BOOK DEMO -->
+
+<a
+href="https://wa.me/923018777220?text=Hello%20DineFlowX,%20please%20give%20me%20a%20demo%20of%20this%20app."
+target="_blank"
+class="btn"
+style="background:white;color:#16a34a;">
+
+Book Free Demo
+
+</a>
+
+
+<!-- LAUNCH -->
+
+<a
+href="https://www.admin.dineflowx.com/"
+target="_blank"
+class="btn btn-launch">
+
+🚀 Launch App
+
+</a>
+
+
+<!-- DOWNLOAD -->
+
+<a
+href="https://github.com/Robologicx/DineFlowX-website/releases/latest/download/app-release.apk"
+class="btn"
+style="background:#0f172a;color:white;">
+
+📱 Download APK
+
+</a>
+
+
 </div>
 
 </div>
 
 </section>
 
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
 <footer id="contact">
 
-<img src="logo-wbg.png" alt="DineFlowX Logo" style="height:80px;margin-bottom:15px;">
+<div class="container">
 
-<h2>DineFlowX</h2>
 
-<p>The Complete Restaurant Management Platform</p>
+<img
+src="logo-wbg.png"
+alt="DineFlowX Logo">
+
+
+<h2>
+DineFlowX
+</h2>
+
+
+<p>
+The Complete Restaurant Management Platform
+</p>
+
 
 <p>
 📞 0301-8777220
 </p>
 
+
 <p>
 🌐 www.robologicx.org
 </p>
+
 
 <p>
 📍 Ranger Market, Husani Chowk, Bahawalpur
 </p>
 
+
+<!-- FOOTER DOWNLOAD -->
+
+<div style="margin-top:25px;">
+
+<a
+href="https://github.com/Robologicx/DineFlowX-website/releases/latest/download/app-release.apk"
+class="btn btn-download download-badge">
+
+<span class="download-icon">
+📱
+</span>
+
+Download Android App
+
+</a>
+
+</div>
+
+
+<p
+style="margin-top:30px;font-size:13px;color:#64748b;">
+
+© 2026 DineFlowX. All Rights Reserved.
+
+</p>
+
+
+</div>
+
 </footer>
 
+
 </body>
+
 </html>
